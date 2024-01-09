@@ -4,9 +4,12 @@ import { formatXMLString } from './utils';
 import { convertMathMl2Math } from './mathml2math';
 
 let MathJax: any;
-mathjax.init({ loader: {load: ['input/tex']} }).then((mathJax: any) => {
-  MathJax = mathJax;
-});
+export async function mathJaxReady() {
+  if (!MathJax) {
+    MathJax = await mathjax.init({ loader: {load: ['input/tex']} });
+  }
+  return true;
+}
 
 export function convertLatex2Math(latexString: string) {
   const mathMlString = latex2MathMl(latexString);
@@ -26,6 +29,7 @@ if (import.meta.vitest) {
 
   describe('latex2MathMl', () => {
     test('latex2MathMl empty', async () => {
+      await mathJaxReady();
       const result = await latex2MathMl('');
       expect(formatXMLString(result)).toBe(formatXMLString(`
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">

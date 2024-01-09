@@ -1,5 +1,5 @@
 // @ts-ignore
-import { mml2omml } from 'mathml2omml';
+import { mml2omml } from '@seewo-doc/mathml2omml';
 import { formatXMLString } from './utils';
 import { convertOmml2Math } from './omml2math';
 

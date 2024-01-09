@@ -3,14 +3,6 @@ Converting LaTeX, MathML, or OMML strings to math objects using docx.js
 
 ## API
 
-### convertLatex2Math
-
-```js
-import { convertLatex2Math } from 'docx-math-converter';
-
-const mathObj = convertLatex2Math('(a\\pm b)^2=a^2\\pm2ab+b^2');
-```
-
 ### convertMathMl2Math
 
 ```js
@@ -63,6 +55,16 @@ const mathObj = convertOmml2Math(`
   </m:oMath>
 `);
 ```
+
+### convertLatex2Math
+
+```js
+import { mathJaxReady, convertLatex2Math } from 'docx-math-converter';
+
+await mathJaxReady();
+const mathObj = convertLatex2Math('(a\\pm b)^2=a^2\\pm2ab+b^2');
+```
+
 
 ## required
 

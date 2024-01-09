@@ -1,12 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@seewo-doc/mathml2omml': ^0.4.1
   '@types/jsdom': ^21.1.6
   '@types/node': ^20.10.7
   docx: ^8.5.0
   jsdom: ^23.2.0
   mathjax: ^3.2.2
-  mathml2omml: ^0.4.0
   typescript: ^5.2.2
   vite: ^5.0.8
   vite-plugin-dts: ^3.7.0
@@ -14,9 +14,9 @@ specifiers:
   vitest: ^1.1.3
 
 dependencies:
+  '@seewo-doc/mathml2omml': 0.4.1
   jsdom: 23.2.0
   mathjax: 3.2.2
-  mathml2omml: 0.4.0
 
 devDependencies:
   '@types/jsdom': 21.1.6
@@ -476,6 +476,10 @@ packages:
       colors: 1.2.5
       string-argv: 0.3.2
     dev: true
+
+  /@seewo-doc/mathml2omml/0.4.1:
+    resolution: {integrity: sha512-T2nNAcnQhwaxzqXqc/YuFsd71xtqrSWmB46ullKgDlL6fLKd5T/BqsY9MSWzEhZv2beHTr3YgfrwuOKzKuXpaA==}
+    dev: false
 
   /@sinclair/typebox/0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -1097,10 +1101,6 @@ packages:
 
   /mathjax/3.2.2:
     resolution: {integrity: sha512-Bt+SSVU8eBG27zChVewOicYs7Xsdt40qm4+UpHyX7k0/O9NliPc+x77k1/FEsPsjKPZGJvtRZM1vO+geW0OhGw==}
-    dev: false
-
-  /mathml2omml/0.4.0:
-    resolution: {integrity: sha512-lFpl1ypxodCryiWFyxMq64nnRx3MZC0B2aW5e+Q1KSbBu6dg84mCsqaXBQM+Q9DZUGDYldgz52QzpF/hII2GhA==}
     dev: false
 
   /mdn-data/2.0.30:

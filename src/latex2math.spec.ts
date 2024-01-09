@@ -2,11 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { Document, Packer, Paragraph, TextRun } from 'docx';
 import { describe, test, expect } from 'vitest';
-import { convertLatex2Math } from './latex2math';
+import { convertLatex2Math, mathJaxReady } from './latex2math';
 
 describe('convertLatex2Math', () => {
   test('createDocx', async () => {
     try {
+      await mathJaxReady();
       const mathObj = convertLatex2Math('(a\\pm b)^2=a^2\\pm2ab+b^2');
     
       const doc = new Document({
