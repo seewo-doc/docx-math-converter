@@ -7,7 +7,7 @@ import { convertLatex2Math } from './latex2math';
 describe('convertLatex2Math', () => {
   test('createDocx', async () => {
     try {
-      const mathObj = await convertLatex2Math('(a\\pm b)^2=a^2\\pm2ab+b^2');
+      const mathObj = convertLatex2Math('(a\\pm b)^2=a^2\\pm2ab+b^2');
     
       const doc = new Document({
         sections: [

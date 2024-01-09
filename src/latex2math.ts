@@ -1,24 +1,38 @@
 // @ts-ignore
-import mathjax from 'mathjax';
+import mathjax from 'mathjax-full';
 import { formatXMLString } from './utils';
 import { convertMathMl2Math } from './mathml2math';
 
-let MathJax: any;
+// https://github.com/mathjax/MathJax-demos-node/blob/master/preload/tex2mml
+import 'mathjax-full/components/src/startup/lib/startup.js';
+import 'mathjax-full/components/src/core/core.js';
+import 'mathjax-full/components/src/adaptors/liteDOM/liteDOM.js';
+import 'mathjax-full/components/src/input/tex-base/tex-base.js';
+import 'mathjax-full/components/src/input/tex/extensions/all-packages/all-packages.js';
+import 'mathjax-full/components/src/startup/startup.js';
 
-export async function convertLatex2Math(latexString: string) {
-  const mathMlString = await latex2MathMl(latexString);
+// @ts-ignore
+MathJax.loader.preLoad(
+  'core',
+  'adaptors/liteDOM',
+  'input/tex-base',
+  '[tex]/all-packages'
+);
+
+// @ts-ignore
+MathJax.config.startup.ready();
+
+export function convertLatex2Math(latexString: string) {
+  const mathMlString = latex2MathMl(latexString);
   return convertMathMl2Math(mathMlString);
 }
 
-async function latex2MathMl(latexString: string) {
+function latex2MathMl(latexString: string) {
   if (typeof latexString !== 'string') {
     throw 'invalid params for latex2MathMl';
   }
 
-  if (!MathJax) {
-    MathJax = await mathjax.init({ loader: {load: ['input/tex']} })
-  }
-
+  // @ts-ignore
   return MathJax.tex2mml(latexString);
 }
 

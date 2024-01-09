@@ -1,6 +1,6 @@
 {
   "name": "@seewo-doc/docx-math-converter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Converting LaTeX, MathML, or OMML strings to math objects using docx.js",
   "type": "module",
   "main": "./dist/docx-math-converter.umd.js",
@@ -36,11 +36,12 @@
   },
   "dependencies": {
     "jsdom": "^23.2.0",
-    "mathjax": "3",
+    "mathjax-full": "^3.2.2",
     "mathml2omml": "^0.4.0"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.10.7",
     "docx": "^8.5.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
