@@ -6,7 +6,7 @@ const { Document, Paragraph, Packer } = require('docx');
 async function test() {
   await mathJaxReady();
   global.MathJax.config.startup.document = '';
-  const result = convertLatex2Math('1+1=2');
+  const result = convertLatex2Math('\\frac{a}{b}=\\frac{a\\times m}{b\\times m}');
   console.log('result', result);
 
   const doc = new Document({

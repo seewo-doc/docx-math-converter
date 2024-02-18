@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { Document, Packer, Paragraph, TextRun } from 'docx';
+import { Document, Packer, Paragraph, TextRun } from '@seewo-doc/docx';
 import { describe, test, expect } from 'vitest';
 import { convertOmml2Math } from './omml2math';
 

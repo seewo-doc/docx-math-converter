@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@seewo-doc/docx': ^8.5.0-beta.1
   '@seewo-doc/mathml2omml': ^0.4.1
   '@types/jsdom': ^21.1.6
   '@types/node': ^20.10.7
-  docx: ^8.5.0
   jsdom: ^23.2.0
   mathjax: ^3.2.2
   typescript: ^5.2.2
@@ -19,9 +19,9 @@ dependencies:
   mathjax: 3.2.2
 
 devDependencies:
+  '@seewo-doc/docx': 8.5.0-beta.1
   '@types/jsdom': 21.1.6
   '@types/node': 20.10.7
-  docx: 8.5.0
   typescript: 5.3.3
   vite: 5.0.11_@types+node@20.10.7
   vite-plugin-dts: 3.7.0_iwezoompk34vb55pql7ceae3t4
@@ -477,6 +477,17 @@ packages:
       string-argv: 0.3.2
     dev: true
 
+  /@seewo-doc/docx/8.5.0-beta.1:
+    resolution: {integrity: sha512-n7YNzMgLdzFDJwc49W23M7fMJoVKtwJAjpvdecr/inmBLzF+gvEHZELgZ/jt1We6NxoifsNIy3hCoy14+RsDhg==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@types/node': 20.10.7
+      jszip: 3.10.1
+      nanoid: 5.0.4
+      xml: 1.0.1
+      xml-js: 1.6.11
+    dev: true
+
   /@seewo-doc/mathml2omml/0.4.1:
     resolution: {integrity: sha512-T2nNAcnQhwaxzqXqc/YuFsd71xtqrSWmB46ullKgDlL6fLKd5T/BqsY9MSWzEhZv2beHTr3YgfrwuOKzKuXpaA==}
     dev: false
@@ -782,17 +793,6 @@ packages:
   /diff-sequences/29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dev: true
-
-  /docx/8.5.0:
-    resolution: {integrity: sha512-4SbcbedPXTciySXiSnNNLuJXpvxFe5nqivbiEHXyL8P/w0wx2uW7YXNjnYgjW0e2e6vy+L/tMISU/oAiXCl57Q==}
-    engines: {node: '>=10'}
-    dependencies:
-      '@types/node': 20.10.7
-      jszip: 3.10.1
-      nanoid: 5.0.4
-      xml: 1.0.1
-      xml-js: 1.6.11
     dev: true
 
   /entities/4.5.0:

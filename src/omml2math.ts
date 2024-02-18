@@ -10,9 +10,9 @@ import {
   MathSuperScript,
   MathSubSuperScript,
   MathRadical,
-  // MathLimitUpper,
-  // MathLimitLower,
-} from "docx";
+  MathLimitUpper,
+  MathLimitLower,
+} from "@seewo-doc/docx";
 
 export function convertOmml2Math(ommlString: string) {
   const dom = new JSDOM(ommlString, { contentType: 'text/xml' });
@@ -61,13 +61,13 @@ function convertItem(item: Element) {
     return buildRadical(item);
   }
 
-  // if (tagName === 'm:limupp') {
-  //   return buildLimitUpp(item);
-  // }
+  if (tagName === 'm:limupp') {
+    return buildLimitUpp(item);
+  }
 
-  // if (tagName === 'm:limlow') {
-  //   return buildLimitLow(item);
-  // }
+  if (tagName === 'm:limlow') {
+    return buildLimitLow(item);
+  }
 
   if (tagName === 'm:nary') {
     return buildNary(item);
@@ -134,25 +134,25 @@ function buildRadical(item: Element): MathComponent {
   });
 }
 
-// function buildLimitUpp(item) {
-//   const e = item.getElementsByTagName('m:e')[0];
-//   const lim = item.getElementsByTagName('m:lim')[0];
+function buildLimitUpp(item: Element): MathComponent {
+  const e = item.getElementsByTagName('m:e')[0];
+  const lim = item.getElementsByTagName('m:lim')[0];
 
-//   return new MathLimitUpper({
-//     children: convertChildren(e.children),
-//     limit: convertChildren(lim.children),
-//   });
-// }
+  return new MathLimitUpper({
+    children: convertChildren(e.children),
+    limit: convertChildren(lim.children),
+  });
+}
 
-// function buildLimitLow(item) {
-//   const e = item.getElementsByTagName('m:e')[0];
-//   const lim = item.getElementsByTagName('m:lim')[0];
+function buildLimitLow(item: Element): MathComponent {
+  const e = item.getElementsByTagName('m:e')[0];
+  const lim = item.getElementsByTagName('m:lim')[0];
 
-//   return new MathLimitLower({
-//     children: convertChildren(e.children),
-//     limit: convertChildren(lim.children),
-//   });
-// }
+  return new MathLimitLower({
+    children: convertChildren(e.children),
+    limit: convertChildren(lim.children),
+  });
+}
 
 function buildNary(item: Element) {
   const char = item.getElementsByTagName('m:chr')[0];
