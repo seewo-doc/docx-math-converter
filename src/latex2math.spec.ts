@@ -8,7 +8,7 @@ describe('convertLatex2Math', () => {
   test('createDocx', async () => {
     try {
       await mathJaxReady();
-      const mathObj = convertLatex2Math('(a\\pm b)^2=a^2\\pm2ab+b^2');
+      const mathObj = convertLatex2Math('s=\\sqrt{\\frac{1}{n}\\left[(x_1-\\overline{x})^2+(x_2…verline{x})^2+\\cdots+(x_n-\\overline{x})^2\\right]}');
     
       const doc = new Document({
         sections: [

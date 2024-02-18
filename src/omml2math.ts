@@ -126,7 +126,7 @@ function buildSubSuperScript(item: Element) {
 function buildRadical(item: Element): MathComponent {
   const e = item.getElementsByTagName('m:e')[0];
   const deg = item.getElementsByTagName('m:deg')[0];
-  const degree = convertItem(deg.children[0]);
+  const degree = deg.children[0] ? convertItem(deg.children[0]) : undefined;
 
   return new MathRadical({
     children: convertChildren(e.children),
