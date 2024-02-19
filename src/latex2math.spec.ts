@@ -8,7 +8,7 @@ describe('convertLatex2Math', () => {
   test('createDocx', async () => {
     try {
       await mathJaxReady();
-      const mathObj = convertLatex2Math('s=\\sqrt{\\frac{1}{n}\\left[(x_1-\\overline{x})^2+(x_2…verline{x})^2+\\cdots+(x_n-\\overline{x})^2\\right]}');
+      const mathObj = convertLatex2Math('\\lim_{x\\rightarrow\\infty}(1+\\frac{1}{x})^x=e');
     
       const doc = new Document({
         sections: [

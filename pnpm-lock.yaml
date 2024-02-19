@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@seewo-doc/docx': ^8.5.0-beta.1
-  '@seewo-doc/mathml2omml': ^0.4.1
+  '@seewo-doc/mathml2omml': ^0.4.2
   '@types/jsdom': ^21.1.6
   '@types/node': ^20.10.7
   jsdom: ^23.2.0
@@ -14,7 +14,7 @@ specifiers:
   vitest: ^1.1.3
 
 dependencies:
-  '@seewo-doc/mathml2omml': 0.4.1
+  '@seewo-doc/mathml2omml': 0.4.2
   jsdom: 23.2.0
   mathjax: 3.2.2
 
@@ -488,8 +488,8 @@ packages:
       xml-js: 1.6.11
     dev: true
 
-  /@seewo-doc/mathml2omml/0.4.1:
-    resolution: {integrity: sha512-T2nNAcnQhwaxzqXqc/YuFsd71xtqrSWmB46ullKgDlL6fLKd5T/BqsY9MSWzEhZv2beHTr3YgfrwuOKzKuXpaA==}
+  /@seewo-doc/mathml2omml/0.4.2:
+    resolution: {integrity: sha512-3RT/Ko0aunVPlFobCLCod6KKWlWsaNd74qHl06hZUlwV3u+uEdZBU++bMJklGaM/TSxaDMDJeuSWK9pivsW+KA==}
     dev: false
 
   /@sinclair/typebox/0.27.8:

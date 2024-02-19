@@ -31,7 +31,7 @@ if (import.meta.vitest) {
       `);
 
       expect(formatXMLString(ommlString)).toBe(formatXMLString(`
-        <m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+        <m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
           <m:r>
             <m:t xml:space="preserve">1+1=2</m:t>
           </m:r>
