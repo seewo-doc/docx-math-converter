@@ -9,7 +9,7 @@ export function convertMathMl2Math(mathMlString: string) {
 }
 
 function convertMathMl2Omml(mml: string) {
-  const ommlString = mml2omml(mml);
+  const ommlString = mml2omml(mml, { disableDecode: true });
   return ommlString;
 }
 
