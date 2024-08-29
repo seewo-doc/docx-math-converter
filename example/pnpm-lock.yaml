@@ -5,12 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@seewo-doc/docx':
+    specifier: ^8.5.0-beta.1
+    version: 8.5.0-beta.1
   '@seewo-doc/docx-math-converter':
-    specifier: ^1.0.4
-    version: 1.0.4(docx@8.5.0)
-  docx:
-    specifier: ^8.5.0
-    version: 8.5.0
+    specifier: ^1.1.1
+    version: 1.1.1(@seewo-doc/docx@8.5.0-beta.1)
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -1090,14 +1090,14 @@ packages:
       nullthrows: 1.1.1
     dev: true
 
-  /@seewo-doc/docx-math-converter@1.0.4(docx@8.5.0):
-    resolution: {integrity: sha512-Rsxj/NWjwDSIPY+yI5JHkqRRvsQAeWeX2JQDV0GXZ6bFD93vzz976oIz2Dk+1lZVP0td0sMVj7aLGh94snkyWg==}
+  /@seewo-doc/docx-math-converter@1.1.1(@seewo-doc/docx@8.5.0-beta.1):
+    resolution: {integrity: sha512-P7twelOy//IgcIandjcsZuvyE2g4SKmdmTZd1HCjjQkPQkfM2E8KECvbO53I3MUeU2crwSidwfZZtWSsfM+YJw==}
     engines: {node: '>=16.17.0'}
     peerDependencies:
-      docx: ^8.4.0
+      '@seewo-doc/docx': ^8.5.0
     dependencies:
-      '@seewo-doc/mathml2omml': 0.4.1
-      docx: 8.5.0
+      '@seewo-doc/docx': 8.5.0-beta.1
+      '@seewo-doc/mathml2omml': 0.4.4
       jsdom: 23.2.0
       mathjax: 3.2.2
     transitivePeerDependencies:
@@ -1107,8 +1107,19 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@seewo-doc/mathml2omml@0.4.1:
-    resolution: {integrity: sha512-T2nNAcnQhwaxzqXqc/YuFsd71xtqrSWmB46ullKgDlL6fLKd5T/BqsY9MSWzEhZv2beHTr3YgfrwuOKzKuXpaA==}
+  /@seewo-doc/docx@8.5.0-beta.1:
+    resolution: {integrity: sha512-n7YNzMgLdzFDJwc49W23M7fMJoVKtwJAjpvdecr/inmBLzF+gvEHZELgZ/jt1We6NxoifsNIy3hCoy14+RsDhg==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@types/node': 20.16.2
+      jszip: 3.10.1
+      nanoid: 5.0.7
+      xml: 1.0.1
+      xml-js: 1.6.11
+    dev: false
+
+  /@seewo-doc/mathml2omml@0.4.4:
+    resolution: {integrity: sha512-bYMjjKrzCu8+yReQp5whf4kMsSYhohxR87blic4IBFm8Dy6nLSbh/ZZ7CMqnPCl4kY2fA+Fg7mH3mFh4VPDwKg==}
     dev: false
 
   /@swc/core-darwin-arm64@1.7.21:
@@ -1717,17 +1728,6 @@ packages:
       miller-rabin: 4.0.1
       randombytes: 2.1.0
     dev: true
-
-  /docx@8.5.0:
-    resolution: {integrity: sha512-4SbcbedPXTciySXiSnNNLuJXpvxFe5nqivbiEHXyL8P/w0wx2uW7YXNjnYgjW0e2e6vy+L/tMISU/oAiXCl57Q==}
-    engines: {node: '>=10'}
-    dependencies:
-      '@types/node': 20.16.2
-      jszip: 3.10.1
-      nanoid: 5.0.7
-      xml: 1.0.1
-      xml-js: 1.6.11
-    dev: false
 
   /dom-serializer@1.4.1:
     resolution: {integrity: sha512-VHwB3KfrcOOkelEG2ZOfxqLZdfkil8PtJi4P8N2MMXucZq2yLp75ClViUlOVwyoHEDjYU433Aq+5zWP61+RGag==}

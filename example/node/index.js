@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const util = require('util');
 const { mathJaxReady, convertLatex2Math } = require('../../dist/docx-math-converter.cjs.js');
-const { Document, Paragraph, Packer } = require('docx');
+const { Document, Paragraph, Packer } = require('@seewo-doc/docx');
 
 async function test() {
   await mathJaxReady();

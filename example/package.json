@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@seewo-doc/docx-math-converter": "^1.0.4",
-    "docx": "^8.5.0",
+    "@seewo-doc/docx-math-converter": "^1.1.1",
+    "@seewo-doc/docx": "^8.5.0-beta.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-json-view": "^1.21.3"
