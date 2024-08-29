@@ -12,7 +12,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'docx-math-converter',
       formats: ['esm', 'cjs'],
-      fileName: (format) => `docx-math-converter.${format}.js`,
+      fileName: (format, entryName) => `docx-math-converter.${format}.js`,
     },
     minify: false,
   },

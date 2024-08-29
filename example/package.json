@@ -3,13 +3,38 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "source": "browser/index.html",
   "scripts": {
-    "test": "node index.js"
+    "start": "parcel",
+    "node-test": "node node/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@seewo-doc/docx-math-converter": "^1.0.4"
+    "@seewo-doc/docx-math-converter": "^1.0.4",
+    "docx": "^8.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-json-view": "^1.21.3"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^5.5.0||^6.0.0",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.1.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.12.0",
+    "path-browserify": "^1.0.0",
+    "process": "^0.11.10",
+    "punycode": "^1.4.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.1.0",
+    "string_decoder": "^1.3.0",
+    "url": "^0.11.0",
+    "util": "^0.12.3",
+    "vm-browserify": "^1.1.2"
   }
 }

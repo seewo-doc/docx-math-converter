@@ -1,13 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const { mathJaxReady, convertLatex2Math } = require('@seewo-doc/docx-math-converter');
+const util = require('util');
+const { mathJaxReady, convertLatex2Math } = require('../../dist/docx-math-converter.cjs.js');
 const { Document, Paragraph, Packer } = require('docx');
 
 async function test() {
   await mathJaxReady();
   global.MathJax.config.startup.document = '';
   const result = convertLatex2Math('\\frac{a}{b}=\\frac{a\\times m}{b\\times m}');
-  console.log('result', result);
+  console.log('result', util.inspect(result, { depth: 10 }));
 
   const doc = new Document({
     sections: [

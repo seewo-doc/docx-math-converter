@@ -5,8 +5,13 @@ import { convertMathMl2Math } from './mathml2math';
 
 let MathJax: any;
 export async function mathJaxReady() {
-  if (!MathJax) {
-    MathJax = await mathjax.init({ loader: {load: ['input/tex']} });
+  if (typeof window === 'undefined') {
+    if (!MathJax) {
+      MathJax = await mathjax.init({ loader: {load: ['input/tex']} });
+    }
+  } else {
+    // @ts-ignore
+    MathJax = window.MathJax;
   }
   return true;
 }

@@ -1,0 +1,37 @@
+#app {
+  margin: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.convert-item-wrapper {
+  width: 600px;
+  margin-bottom: 100px;
+}
+
+.math-input {
+  width: 100%;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.convert-btn-wrapper {
+  display: flex;
+  justify-content: right;
+  margin: 10px 0;
+}
+
+.convert-btn-wrapper button {
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.result-wrapper {
+  height: 300px;
+  border: 1px solid gainsboro;
+  overflow: scroll;
+  padding: 10px;
+}

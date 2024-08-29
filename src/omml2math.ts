@@ -1,4 +1,4 @@
-import { JSDOM } from 'jsdom';
+import jsdom from 'jsdom';
 import {
   Math,
   MathComponent,
@@ -15,8 +15,16 @@ import {
 } from "@seewo-doc/docx";
 
 export function convertOmml2Math(ommlString: string) {
-  const dom = new JSDOM(ommlString, { contentType: 'text/xml' });
-  const doc = dom.window.document;
+  let doc: Document;
+
+  if (typeof window === 'undefined') {
+    const dom = new jsdom.JSDOM(ommlString, { contentType: 'text/xml' });
+    doc = dom.window.document;
+  } else {
+    const parser = new DOMParser();
+    doc = parser.parseFromString(ommlString, 'text/xml');
+  }
+  
   const mathElement = doc.getElementsByTagName('m:oMath')[0];
   const children = convertChildren(mathElement.children);
 
