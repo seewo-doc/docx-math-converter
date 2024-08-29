@@ -1,4 +1,7 @@
 # docx-math-converter
+
+![npm version](https://img.shields.io/npm/v/@seewo-doc/docx-math-converter)
+
 Converting LaTeX, MathML, or OMML strings to math objects using docx.js
 
 ## API
